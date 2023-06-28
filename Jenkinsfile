@@ -12,7 +12,6 @@ node {
         }
 
         stage('Test') {
-            sh 'npm test'
             sh './jenkins/scripts/test.sh'
         }
 

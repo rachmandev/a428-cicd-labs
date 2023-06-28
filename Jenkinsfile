@@ -1,5 +1,5 @@
 node {
-    docker.image('node:16-buster-slim').inside('-p 3000:3000').inside('--network host') {
+    docker.image('node:16-buster-slim').inside('-p 3000:3000') {
 
         // triggers {
         //     pollSCM('*/2 * * * *') 

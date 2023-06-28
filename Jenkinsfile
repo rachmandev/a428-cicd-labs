@@ -12,12 +12,13 @@ node {
         }
 
         stage('Test') {
+            sh 'npm test'
             sh './jenkins/scripts/test.sh'
         }
 
-        stage('Deploy') {
-            //
-        }
+        // stage('Deploy') {
+        //     //
+        // }
 
     }
 }

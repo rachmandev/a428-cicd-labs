@@ -1,7 +1,7 @@
 // Scripted jenkinsfile created by Rachmandev
 node {
     docker.image('node:16-buster-slim').inside('-p 3500:3500') {
-        
+        checkout scm
         stage('Build') {
             // sh 'npm config rm proxy'
             // sh 'npm config rm https-proxy --tried removing npm proxy'

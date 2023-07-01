@@ -1,3 +1,4 @@
+// Scripted jenkinsfile created by Rachmandev
 node {
     docker.image('node:16-buster-slim').inside('-p 3500:3500') {
         

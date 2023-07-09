@@ -14,10 +14,13 @@ node {
             sh './jenkins/scripts/test.sh'
         }
 
+        stage('Manual Approval') {
+            input message: 'Lanjutkan ke tahap Deploy ?'
+        }
+
         stage('Deploy') {
             sh './jenkins/scripts/deliver.sh'
-            input message: 'Sudah Selesai Menggunakan React App? (Klik "Proceed" untuk mengakhiri)'
-            sh './jenkins/scripts/kill.sh'
+            sleep time: 1, unit: 'MINUTES'
         }
 
     }
